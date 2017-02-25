@@ -1,0 +1,22 @@
+From 9c8e06ece66f518c965b499727fb08a18309494a Mon Sep 17 00:00:00 2001
+From: Jonas Karlman <jonas@kwiboo.se>
+Date: Fri, 30 Dec 2016 12:31:01 +0100
+Subject: [PATCH] Fix xbmc_scr_dll.h include path
+
+---
+ src/main.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/main.cpp b/src/main.cpp
+index e835f16..d45748f 100644
+--- a/src/main.cpp
++++ b/src/main.cpp
+@@ -18,7 +18,7 @@
+  *
+  */
+ 
+-#include "kodi/xbmc_scr_dll.h"
++#include "xbmc_scr_dll.h"
+ #if defined(HAS_GLES)
+ #include <GLES2/gl2.h>
+ #include <EGL/egl.h>
