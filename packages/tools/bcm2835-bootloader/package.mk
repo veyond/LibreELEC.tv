@@ -53,7 +53,9 @@ makeinstall_target() {
       cp -PRv $PKG_DIR/files/3rdparty/bootloader/distroconfig.txt $INSTALL/usr/share/bootloader
     fi
 
-    if [ -f $DISTRO_DIR/$DISTRO/config/config.txt ]; then
+    if [ -f $PROJECT_DIR/$PROJECT/bootloader/config.txt ]; then
+      cp -PRv $PROJECT_DIR/$PROJECT/bootloader/config.txt $INSTALL/usr/share/bootloader
+    elif [ -f $DISTRO_DIR/$DISTRO/config/config.txt ]; then
       cp -PRv $DISTRO_DIR/$DISTRO/config/config.txt $INSTALL/usr/share/bootloader
     else
       cp -PRv $PKG_DIR/files/3rdparty/bootloader/config.txt $INSTALL/usr/share/bootloader
